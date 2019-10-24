@@ -4,6 +4,14 @@ Adds support for KlikAanKlikUit / Trust / CoCo devices.
 
 ## What's new
 Improved dimmer signal handling
+Add battery types for devices that are using them.
+Toggle on off when the dim level has changed.
+
+### v4.2.6
+Toggle on off when the dim level has changed.
+
+### v4.2.5
+Added battery types for devices that use them. They will show up under the Energy tab in the Homey app.
 
 ### v4.2.3
 Added signal improvements for dimmers. This should prevent the invalid data error for dimmer devices.

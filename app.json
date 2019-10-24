@@ -1,6 +1,6 @@
 {
   "id": "nl.klikaanklikuit",
-  "version": "4.2.5",
+  "version": "4.2.6",
   "compatibility": ">=3.0.0",
   "sdk": 2,
   "category": [
@@ -786,6 +786,11 @@
         "dropPendingPayload": false,
         "signal": "kakudim"
       },
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": true
+        }
+      },
       "pair": [
         {
           "id": "rf.choice",
@@ -894,6 +899,11 @@
         "minTxInterval": 2000,
         "dropPendingPayload": false,
         "signal": "kakudim"
+      },
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": true
+        }
       },
       "pair": [
         {
@@ -1405,6 +1415,11 @@
         "dropPendingPayload": false,
         "signal": "kakudim"
       },
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": true
+        }
+      },
       "pair": [
         {
           "id": "rf.choice",
@@ -1730,6 +1745,11 @@
         "dropPendingPayload": false,
         "signal": "kakudim"
       },
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": true
+        }
+      },
       "pair": [
         {
           "id": "rf.choice",
@@ -1838,6 +1858,11 @@
         "minTxInterval": 2000,
         "dropPendingPayload": false,
         "signal": "kakudim"
+      },
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": true
+        }
       },
       "pair": [
         {
@@ -2056,6 +2081,11 @@
         "dropPendingPayload": false,
         "signal": "kakudim"
       },
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": true
+        }
+      },
       "pair": [
         {
           "id": "rf.choice",
@@ -2164,6 +2194,11 @@
         "minTxInterval": 2000,
         "dropPendingPayload": false,
         "signal": "kakudim"
+      },
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": true
+        }
       },
       "pair": [
         {
@@ -2366,6 +2401,11 @@
         "dropPendingPayload": false,
         "signal": "kakudim"
       },
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": true
+        }
+      },
       "pair": [
         {
           "id": "rf.choice",
@@ -2458,6 +2498,11 @@
         "minTxInterval": 2000,
         "dropPendingPayload": false,
         "signal": "kakudim"
+      },
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": true
+        }
       },
       "pair": [
         {
@@ -2567,6 +2612,11 @@
         "minTxInterval": 2000,
         "dropPendingPayload": false,
         "signal": "kakudim"
+      },
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": true
+        }
       },
       "pair": [
         {
@@ -2784,6 +2834,11 @@
         "minTxInterval": 2000,
         "dropPendingPayload": false,
         "signal": "kakudim"
+      },
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": true
+        }
       },
       "pair": [
         {
@@ -3148,6 +3203,11 @@
         "dropPendingPayload": false,
         "signal": "kakudim"
       },
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": true
+        }
+      },
       "pair": [
         {
           "id": "rf.choice",
@@ -3244,6 +3304,11 @@
         "minTxInterval": 2000,
         "dropPendingPayload": false,
         "signal": "kakudim"
+      },
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": true
+        }
       },
       "pair": [
         {
@@ -3342,6 +3407,11 @@
         "dropPendingPayload": false,
         "signal": "kakudim"
       },
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": true
+        }
+      },
       "pair": [
         {
           "id": "rf.choice",
@@ -3439,6 +3509,11 @@
         "dropPendingPayload": false,
         "signal": "kakudim"
       },
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": true
+        }
+      },
       "pair": [
         {
           "id": "rf.choice",
@@ -3535,6 +3610,11 @@
         "minTxInterval": 2000,
         "dropPendingPayload": false,
         "signal": "kakudim"
+      },
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": true
+        }
       },
       "pair": [
         {
@@ -4822,6 +4902,11 @@
         "dropPendingPayload": false,
         "signal": "kakudim"
       },
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": true
+        }
+      },
       "pair": [
         {
           "id": "rf.choice",
@@ -4930,6 +5015,11 @@
         "minTxInterval": 2000,
         "dropPendingPayload": false,
         "signal": "kakudim"
+      },
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": true
+        }
       },
       "pair": [
         {
