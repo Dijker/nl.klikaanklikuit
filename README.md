@@ -7,7 +7,7 @@ Improved dimmer signal handling
 Add battery types for devices that are using them.
 Toggle on off when the dim level has changed.
 
-### v4.2.6
+### v4.2.6-7
 Toggle on off when the dim level has changed.
 
 ### v4.2.5
