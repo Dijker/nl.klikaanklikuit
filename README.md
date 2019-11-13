@@ -7,8 +7,11 @@ Improved dimmer signal handling
 Add battery types for devices that are using them.
 Toggle on off when the dim level has changed.
 
+### v4.2.8
+Fix App store device icons.
+
 ### v4.2.6-7
-Toggle on off when the dim level has changed.
+Toggle on/off when the dim level has changed.
 
 ### v4.2.5
 Added battery types for devices that use them. They will show up under the Energy tab in the Homey app.

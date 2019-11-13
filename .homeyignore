@@ -2,4 +2,3 @@
 .git
 *@backup*
 env.json
-drivers/*/assets/images/*
