@@ -1,0 +1,12 @@
+{
+  "4.2.8": {
+    "en": "Fix App store device images."
+  },
+  "4.2.7": {
+    "en": "Toggle on/off when the dim level has changed."
+  },
+  "4.2.5": {
+    "en": "Added signal improvements for dimmers. This should prevent the invalid data error for dimmer devices."
+  }
+  
+}

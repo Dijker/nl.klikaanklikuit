@@ -1,0 +1,2 @@
+With KlikAanKlikUit you can remotely control your lighting - from anywhere. Dim the lights in your bedroom slowly to wake you up or turn on your lightning automatically at sunset.
+Connect with Homey and create the most beautiful scenes with just one press of a button.
