@@ -3,11 +3,6 @@
         "onoff",
         "dim"
     ],
-    "capabilitiesOptions": {
-        "onoff": {
-          "setOnDim": true
-        }
-    },
     "rf": {
         "debounceTimeout": 500,
         "minTxInterval": 2000,

@@ -5,7 +5,15 @@ Adds support for KlikAanKlikUit / Trust / CoCo devices.
 ## What's new
 Improved dimmer signal handling
 Add battery types for devices that are using them.
-Toggle on off when the dim level has changed.
+
+### v4.3.0
+Added new devices:
+* ACC-3500 Socket
+* ACC-250 Dimmable socket
+* ACCT-510 Keychain remote
+* ACCT-9900 Round wall remote
+* ACST-606 Contact sensor
+* ACM-2300-HC In-wall dimmer
 
 ### v4.2.8
 Fix App store device icons.

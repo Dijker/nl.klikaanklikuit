@@ -1,6 +1,6 @@
 {
   "id": "nl.klikaanklikuit",
-  "version": "4.2.8",
+  "version": "4.3.0",
   "compatibility": ">=3.0.0",
   "sdk": 2,
   "category": [
@@ -15,6 +15,10 @@
   "description": {
     "en": "Give Homey the ability to control your KlikAanKlikUit devices",
     "nl": "Laat Homey KlikAanKlikUit modules aansturen."
+  },
+  "tags": {
+    "en": [ "coco", "clickonclickoff", "click" ],
+    "nl": [ "kaku", "klikaanklikuit", "klik" ]
   },
   "author": {
     "name": "Athom B.V."

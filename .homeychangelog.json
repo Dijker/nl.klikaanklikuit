@@ -1,4 +1,7 @@
 {
+  "4.3.0": {
+    "en": "Added new devices:  ACC-250, ACC-3500, ACCT-510, ACM-2300-HC, ACST-606, ACST-9900. Fixed a issue where dimmer devices where not controlled correctly."
+  },
   "4.2.8": {
     "en": "Fix App store device images."
   },
@@ -8,5 +11,4 @@
   "4.2.5": {
     "en": "Added signal improvements for dimmers. This should prevent the invalid data error for dimmer devices."
   }
-  
 }
