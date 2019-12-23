@@ -1,6 +1,6 @@
 {
   "id": "nl.klikaanklikuit",
-  "version": "4.3.0",
+  "version": "4.3.1",
   "compatibility": ">=3.0.0",
   "sdk": 2,
   "category": [
@@ -2262,6 +2262,172 @@
       "name": {
         "en": "ACM-250"
       }
+    },
+    {
+      "images": {
+        "large": "/drivers/ACM-250-LD/assets/images/large.png",
+        "small": "/drivers/ACM-250-LD/assets/images/small.png"
+      },
+      "icon": "/drivers/ACM-250-LD/assets/icon.svg",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "class": "socket",
+      "rf": {
+        "debounceTimeout": 500,
+        "minTxInterval": 2000,
+        "dropPendingPayload": false,
+        "signal": "kakudim"
+      },
+      "pair": [
+        {
+          "id": "rf.choice",
+          "options": {
+            "title": "rf.pair.choice.title.switch",
+            "body": "rf.pair.choice.body.switch",
+            "svgHeight": "65vh",
+            "choices": [
+              {
+                "name": "rf.pair.choice.buttons.copy.default",
+                "view": "rf.imitate",
+                "svg": "assets/svg/AYCT-102_pair.svg"
+              },
+              {
+                "name": "rf.pair.choice.buttons.generate.default",
+                "view": "rf.program",
+                "svg": "assets/svg/pair.svg"
+              }
+            ]
+          }
+        },
+        {
+          "id": "rf.imitate",
+          "options": {
+            "title": "rf.pair.imitate.title.socket",
+            "body": "rf.pair.imitate.body.build_in",
+            "svg": "assets/svg/AYCT-102_pair.svg"
+          },
+          "navigation": {
+            "prev": "rf.choice"
+          }
+        },
+        {
+          "id": "rf.test_switch.2",
+          "options": {
+            "initWithDeviceData": true,
+            "title": "rf.pair.test_switch.title.build_in",
+            "body": "rf.pair.test_switch.body.build_in"
+          },
+          "navigation": {
+            "prev": "rf.imitate",
+            "next": "choose_slave.2"
+          }
+        },
+        {
+          "id": "choose_slave.2",
+          "template": "choose_slave",
+          "navigation": {
+            "prev": "rf.test_switch.2",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.program",
+          "options": {
+            "title": "rf.pair.program.title.build_in",
+            "body": "rf.pair.program.body.build_in",
+            "svg": "assets/svg/pair.svg"
+          },
+          "navigation": {
+            "prev": "rf.choice"
+          }
+        },
+        {
+          "id": "rf.test_switch",
+          "options": {
+            "title": "rf.pair.test_switch.title.build_in",
+            "body": "rf.pair.test_switch.body.build_in",
+            "initWithDeviceData": true
+          },
+          "navigation": {
+            "prev": "rf.program",
+            "next": "choose_slave"
+          }
+        },
+        {
+          "id": "choose_slave",
+          "template": "choose_slave",
+          "navigation": {
+            "prev": "rf.test_switch",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.done"
+        }
+      ],
+      "id": "ACM-250-LD",
+      "name": {
+        "en": "ACM-250-LD"
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Advanced settings",
+            "nl": "Geadvanceerde instellingen"
+          },
+          "children": [
+            {
+              "id": "timeout",
+              "type": "dropdown",
+              "value": "0",
+              "label": {
+                "en": "Timeout to turn off. Please select the same setting on the physical device.",
+                "nl": "Vertraging om uit te schakelen. Selecteer dezelfde tijd als op het fysieke apparaat."
+              },
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Never",
+                    "nl": "Nooit"
+                  }
+                },
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "1 Minute",
+                    "nl": "1 Minuut"
+                  }
+                },
+                {
+                  "id": "10",
+                  "label": {
+                    "en": "10 Minutes",
+                    "nl": "10 Minuten"
+                  }
+                },
+                {
+                  "id": "60",
+                  "label": {
+                    "en": "1 Hour",
+                    "nl": "1 Uur"
+                  }
+                },
+                {
+                  "id": "240",
+                  "label": {
+                    "en": "4 Hours",
+                    "nl": "4 Uur"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "images": {

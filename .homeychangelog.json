@@ -1,4 +1,8 @@
 {
+  "4.3.1": {
+    "en": "Added new device: ACM-250-LD built in dimmer.",
+    "nl": "Nieuw apparaat toegevoegd: ACM-250-LD inbouwdimmer."
+  },
   "4.3.0": {
     "en": "Added new devices:  ACC-250, ACC-3500, ACCT-510, ACM-2300-HC, ACST-606, ACST-9900. Fixed a issue where dimmer devices where not controlled correctly."
   },
