@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="960px" height="960px" viewBox="0 0 960 960" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60 (88103) - https://sketch.com -->
+    <title>icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Path-4" stroke="#000000" stroke-width="30" stroke-linejoin="round" points="66.780324 112.610123 160 19.3904469 800.677922 19.3904469 893.897598 112.610123 893.897598 860.457386 813.149131 941.205853 160 941.205853 66.780324 847.986177"/>
+        <path d="M73.1694805,729.84029 L73.1694805,714.84029 L143.446772,714.84029 C149.361223,714.84029 154.155833,710.13928 154.155833,704.34029 L154.155833,252.047583 C154.155833,237.964322 165.799887,226.547583 180.163555,226.547583 L780.175406,226.547583 C794.539074,226.547583 806.183128,237.964322 806.183128,252.047583 L806.183128,704.34029 C806.183128,710.13928 810.977738,714.84029 816.892189,714.84029 L887.16948,714.84029 L887.16948,729.84029" id="Path" stroke="#000000" stroke-width="15" stroke-linecap="square" stroke-linejoin="round"/>
+        <circle id="Oval" stroke="#000000" stroke-width="15" stroke-linejoin="round" cx="737" cy="156" r="48"/>
+        <circle id="Oval" stroke="#000000" stroke-width="15" stroke-linejoin="round" cx="374" cy="145" r="25"/>
+        <circle id="Oval" fill="#000000" fill-rule="nonzero" cx="471" cy="145" r="13"/>
+        <rect id="Rectangle" stroke="#000000" stroke-width="15" stroke-linejoin="round" x="201" y="743" width="113" height="113"/>
+        <rect id="Rectangle" fill="#000000" fill-rule="nonzero" x="221" y="763" width="73" height="73"/>
+        <rect id="Rectangle" stroke="#000000" stroke-width="15" stroke-linejoin="round" x="314" y="743" width="113" height="113"/>
+        <rect id="Rectangle" fill="#000000" fill-rule="nonzero" x="334" y="763" width="73" height="73"/>
+        <rect id="Rectangle" stroke="#000000" stroke-width="15" stroke-linejoin="round" x="427" y="743" width="113" height="113"/>
+        <rect id="Rectangle" fill="#000000" fill-rule="nonzero" x="447" y="763" width="73" height="73"/>
+        <rect id="Rectangle" stroke="#000000" stroke-width="15" stroke-linejoin="round" x="540" y="743" width="113" height="113"/>
+        <rect id="Rectangle" fill="#000000" fill-rule="nonzero" x="560" y="763" width="73" height="73"/>
+        <rect id="Rectangle" stroke="#000000" stroke-width="15" stroke-linejoin="round" x="653" y="743" width="113" height="113"/>
+        <rect id="Rectangle" fill="#000000" fill-rule="nonzero" x="673" y="763" width="73" height="73"/>
+    </g>
+</svg>

@@ -1,0 +1,18 @@
+{
+    "id": "ACCT-510",
+    "name": {
+        "en": "ACCT-510"
+    },
+    "images": {
+        "large": "{{driverPath}}/assets/images/large.png",
+        "small": "{{driverPath}}/assets/images/small.png"
+    },
+    "energy": {
+        "batteries": [ "CR2450" ]
+    },
+    "$extends": [
+        "defaults",
+        "pair.remote",
+        "flow.switch.single"
+    ]
+}

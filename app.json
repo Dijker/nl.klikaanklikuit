@@ -1,7 +1,7 @@
 {
   "id": "nl.klikaanklikuit",
-  "version": "4.1.1",
-  "compatibility": ">=1.5.3",
+  "version": "4.3.1",
+  "compatibility": ">=3.0.0",
   "sdk": 2,
   "category": [
     "appliances",
@@ -15,6 +15,18 @@
   "description": {
     "en": "Give Homey the ability to control your KlikAanKlikUit devices",
     "nl": "Laat Homey KlikAanKlikUit modules aansturen."
+  },
+  "tags": {
+    "en": [
+      "coco",
+      "clickonclickoff",
+      "click"
+    ],
+    "nl": [
+      "kaku",
+      "klikaanklikuit",
+      "klik"
+    ]
   },
   "author": {
     "name": "Athom B.V."
@@ -39,8 +51,8 @@
       "class": "sensor",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -72,6 +84,12 @@
       "id": "ABST-604",
       "name": {
         "en": "ABST-604"
+      },
+      "energy": {
+        "batteries": [
+          "AAA",
+          "AAA"
+        ]
       }
     },
     {
@@ -86,8 +104,8 @@
       "class": "socket",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -343,8 +361,8 @@
       "class": "socket",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -451,8 +469,8 @@
       "class": "socket",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -559,8 +577,8 @@
       "class": "socket",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -657,6 +675,270 @@
     },
     {
       "images": {
+        "large": "/drivers/ACC-250/assets/images/large.png",
+        "small": "/drivers/ACC-250/assets/images/small.png"
+      },
+      "icon": "/drivers/ACC-250/assets/icon.svg",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "class": "socket",
+      "rf": {
+        "debounceTimeout": 500,
+        "minTxInterval": 2000,
+        "dropPendingPayload": false,
+        "signal": "kakudim"
+      },
+      "pair": [
+        {
+          "id": "rf.choice",
+          "options": {
+            "title": "rf.pair.choice.title.switch",
+            "body": "rf.pair.choice.body.switch",
+            "svgHeight": "65vh",
+            "choices": [
+              {
+                "name": "rf.pair.choice.buttons.copy.default",
+                "view": "rf.imitate",
+                "svg": "assets/svg/AYCT-102_pair.svg"
+              },
+              {
+                "name": "rf.pair.choice.buttons.generate.default",
+                "view": "rf.program",
+                "svg": "assets/svg/pair.svg"
+              }
+            ]
+          }
+        },
+        {
+          "id": "rf.imitate",
+          "options": {
+            "title": "rf.pair.imitate.title.socket",
+            "body": "rf.pair.imitate.body.socket",
+            "svg": "assets/svg/AYCT-102_pair.svg"
+          },
+          "navigation": {
+            "prev": "rf.choice"
+          }
+        },
+        {
+          "id": "rf.test_switch.2",
+          "options": {
+            "initWithDeviceData": true,
+            "title": "rf.pair.test_switch.title.socket",
+            "body": "rf.pair.test_switch.body.socket"
+          },
+          "navigation": {
+            "prev": "rf.imitate",
+            "next": "choose_slave.2"
+          }
+        },
+        {
+          "id": "choose_slave.2",
+          "template": "choose_slave",
+          "navigation": {
+            "prev": "rf.test_switch.2",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.program",
+          "options": {
+            "title": "rf.pair.program.title.socket",
+            "body": "rf.pair.program.body.simple_socket",
+            "svg": "assets/svg/pair.svg"
+          },
+          "navigation": {
+            "prev": "rf.choice"
+          }
+        },
+        {
+          "id": "rf.test_switch",
+          "options": {
+            "title": "rf.pair.test_switch.title.socket",
+            "body": "rf.pair.test_switch.body.socket",
+            "initWithDeviceData": true
+          },
+          "navigation": {
+            "prev": "rf.program",
+            "next": "choose_slave"
+          }
+        },
+        {
+          "id": "choose_slave",
+          "template": "choose_slave",
+          "navigation": {
+            "prev": "rf.test_switch",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.done"
+        }
+      ],
+      "id": "ACC-250",
+      "name": {
+        "en": "ACC-250"
+      }
+    },
+    {
+      "images": {
+        "large": "/drivers/ACC-3500/assets/images/large.png",
+        "small": "/drivers/ACC-3500/assets/images/small.png"
+      },
+      "icon": "/drivers/ACC-3500/assets/icon.svg",
+      "capabilities": [
+        "onoff"
+      ],
+      "class": "socket",
+      "rf": {
+        "debounceTimeout": 500,
+        "dropPendingPayload": false,
+        "minTxInterval": 500,
+        "signal": "kaku"
+      },
+      "pair": [
+        {
+          "id": "rf.choice",
+          "options": {
+            "title": "rf.pair.choice.title.switch",
+            "body": "rf.pair.choice.body.switch",
+            "svgHeight": "65vh",
+            "choices": [
+              {
+                "name": "rf.pair.choice.buttons.copy.default",
+                "view": "rf.imitate",
+                "svg": "assets/svg/ACC-2300_pair.svg"
+              },
+              {
+                "name": "rf.pair.choice.buttons.generate.default",
+                "view": "rf.program",
+                "svg": "assets/svg/pair.svg"
+              }
+            ]
+          }
+        },
+        {
+          "id": "rf.imitate",
+          "options": {
+            "title": "rf.pair.imitate.title.socket",
+            "body": "rf.pair.imitate.body.socket",
+            "svg": "assets/svg/ACC-2300_pair.svg"
+          },
+          "navigation": {
+            "prev": "rf.choice"
+          }
+        },
+        {
+          "id": "rf.test_switch.2",
+          "options": {
+            "initWithDeviceData": true,
+            "title": "rf.pair.test_switch.title.socket",
+            "body": "rf.pair.test_switch.body.socket"
+          },
+          "navigation": {
+            "prev": "rf.imitate",
+            "next": "choose_slave.2"
+          }
+        },
+        {
+          "id": "choose_slave.2",
+          "template": "choose_slave",
+          "navigation": {
+            "prev": "rf.test_switch.2",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.program",
+          "options": {
+            "title": "rf.pair.program.title.socket",
+            "body": "rf.pair.program.body.simple_socket",
+            "svg": "assets/svg/pair.svg"
+          },
+          "navigation": {
+            "prev": "rf.choice"
+          }
+        },
+        {
+          "id": "rf.test_switch",
+          "options": {
+            "title": "rf.pair.test_switch.title.socket",
+            "body": "rf.pair.test_switch.body.socket",
+            "initWithDeviceData": true
+          },
+          "navigation": {
+            "prev": "rf.program",
+            "next": "choose_slave"
+          }
+        },
+        {
+          "id": "choose_slave",
+          "template": "choose_slave",
+          "navigation": {
+            "prev": "rf.test_switch",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.done"
+        }
+      ],
+      "id": "ACC-3500",
+      "name": {
+        "en": "ACC-3500"
+      }
+    },
+    {
+      "images": {
+        "large": "/drivers/ACCT-510/assets/images/large.png",
+        "small": "/drivers/ACCT-510/assets/images/small.png"
+      },
+      "icon": "/drivers/ACCT-510/assets/icon.svg",
+      "capabilities": [],
+      "class": "other",
+      "rf": {
+        "debounceTimeout": 500,
+        "dropPendingPayload": false,
+        "minTxInterval": 500,
+        "signal": "kaku"
+      },
+      "pair": [
+        {
+          "id": "rf.imitate",
+          "options": {
+            "title": "rf.pair.imitate.title.remote",
+            "body": "rf.pair.imitate.body.remote",
+            "svg": "assets/svg/pair.svg"
+          }
+        },
+        {
+          "id": "rf.test",
+          "options": {
+            "svg": "assets/svg/test.svg"
+          },
+          "navigation": {
+            "prev": "rf.imitate",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.done"
+        }
+      ],
+      "id": "ACCT-510",
+      "name": {
+        "en": "ACCT-510"
+      },
+      "energy": {
+        "batteries": [
+          "CR2450"
+        ]
+      }
+    },
+    {
+      "images": {
         "large": "/drivers/ACD-1000/assets/images/large.png",
         "small": "/drivers/ACD-1000/assets/images/small.png"
       },
@@ -667,8 +949,8 @@
       "class": "socket",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -993,8 +1275,8 @@
       "class": "socket",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -1183,6 +1465,13 @@
       "id": "ACDB-6600C",
       "name": {
         "en": "ACDB-6600C"
+      },
+      "energy": {
+        "batteries": [
+          "AA",
+          "AA",
+          "AA"
+        ]
       }
     },
     {
@@ -1195,8 +1484,8 @@
       "class": "other",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -1225,6 +1514,11 @@
       "id": "ACDB-7000A",
       "name": {
         "en": "ACDB-7000A Remote"
+      },
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
       }
     },
     {
@@ -1237,8 +1531,8 @@
       "class": "other",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -1267,6 +1561,11 @@
       "id": "ACDB-7000B",
       "name": {
         "en": "ACDB-7000B Remote"
+      },
+      "energy": {
+        "batteries": [
+          "A23"
+        ]
       }
     },
     {
@@ -1486,8 +1785,8 @@
       "class": "socket",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -1584,6 +1883,171 @@
     },
     {
       "images": {
+        "large": "/drivers/ACM-2300-HC/assets/images/large.png",
+        "small": "/drivers/ACM-2300-HC/assets/images/small.png"
+      },
+      "icon": "/drivers/ACM-2300-HC/assets/icon.svg",
+      "capabilities": [
+        "onoff"
+      ],
+      "class": "socket",
+      "rf": {
+        "debounceTimeout": 500,
+        "dropPendingPayload": false,
+        "minTxInterval": 500,
+        "signal": "kaku"
+      },
+      "pair": [
+        {
+          "id": "rf.choice",
+          "options": {
+            "title": "rf.pair.choice.title.switch",
+            "body": "rf.pair.choice.body.switch",
+            "svgHeight": "65vh",
+            "choices": [
+              {
+                "name": "rf.pair.choice.buttons.copy.default",
+                "view": "rf.imitate",
+                "svg": "assets/svg/AYCT-102_pair.svg"
+              },
+              {
+                "name": "rf.pair.choice.buttons.generate.default",
+                "view": "rf.program",
+                "svg": "assets/svg/pair.svg"
+              }
+            ]
+          }
+        },
+        {
+          "id": "rf.imitate",
+          "options": {
+            "title": "rf.pair.imitate.title.socket",
+            "body": "rf.pair.imitate.body.build_in",
+            "svg": "assets/svg/AYCT-102_pair.svg"
+          },
+          "navigation": {
+            "prev": "rf.choice"
+          }
+        },
+        {
+          "id": "rf.test_switch.2",
+          "options": {
+            "initWithDeviceData": true,
+            "title": "rf.pair.test_switch.title.build_in",
+            "body": "rf.pair.test_switch.body.build_in"
+          },
+          "navigation": {
+            "prev": "rf.imitate",
+            "next": "choose_slave.2"
+          }
+        },
+        {
+          "id": "choose_slave.2",
+          "template": "choose_slave",
+          "navigation": {
+            "prev": "rf.test_switch.2",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.program",
+          "options": {
+            "title": "rf.pair.program.title.build_in",
+            "body": "rf.pair.program.body.build_in",
+            "svg": "assets/svg/pair.svg"
+          },
+          "navigation": {
+            "prev": "rf.choice"
+          }
+        },
+        {
+          "id": "rf.test_switch",
+          "options": {
+            "title": "rf.pair.test_switch.title.build_in",
+            "body": "rf.pair.test_switch.body.build_in",
+            "initWithDeviceData": true
+          },
+          "navigation": {
+            "prev": "rf.program",
+            "next": "choose_slave"
+          }
+        },
+        {
+          "id": "choose_slave",
+          "template": "choose_slave",
+          "navigation": {
+            "prev": "rf.test_switch",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.done"
+        }
+      ],
+      "id": "ACM-2300-HC",
+      "name": {
+        "en": "ACM-2300-HC"
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Advanced settings",
+            "nl": "Geadvanceerde instellingen"
+          },
+          "children": [
+            {
+              "id": "timeout",
+              "type": "dropdown",
+              "value": "0",
+              "label": {
+                "en": "Timeout to turn off. Please select the same setting on the physical device.",
+                "nl": "Vertraging om uit te schakelen. Selecteer dezelfde tijd als op het fysieke apparaat."
+              },
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Never",
+                    "nl": "Nooit"
+                  }
+                },
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "1 Minute",
+                    "nl": "1 Minuut"
+                  }
+                },
+                {
+                  "id": "10",
+                  "label": {
+                    "en": "10 Minutes",
+                    "nl": "10 Minuten"
+                  }
+                },
+                {
+                  "id": "60",
+                  "label": {
+                    "en": "1 Hour",
+                    "nl": "1 Uur"
+                  }
+                },
+                {
+                  "id": "240",
+                  "label": {
+                    "en": "4 Hours",
+                    "nl": "4 Uur"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "images": {
         "large": "/drivers/ACM-2300H/assets/images/large.jpg",
         "small": "/drivers/ACM-2300H/assets/images/small.jpg"
       },
@@ -1594,8 +2058,8 @@
       "class": "socket",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -1801,6 +2265,172 @@
     },
     {
       "images": {
+        "large": "/drivers/ACM-250-LD/assets/images/large.png",
+        "small": "/drivers/ACM-250-LD/assets/images/small.png"
+      },
+      "icon": "/drivers/ACM-250-LD/assets/icon.svg",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "class": "socket",
+      "rf": {
+        "debounceTimeout": 500,
+        "minTxInterval": 2000,
+        "dropPendingPayload": false,
+        "signal": "kakudim"
+      },
+      "pair": [
+        {
+          "id": "rf.choice",
+          "options": {
+            "title": "rf.pair.choice.title.switch",
+            "body": "rf.pair.choice.body.switch",
+            "svgHeight": "65vh",
+            "choices": [
+              {
+                "name": "rf.pair.choice.buttons.copy.default",
+                "view": "rf.imitate",
+                "svg": "assets/svg/AYCT-102_pair.svg"
+              },
+              {
+                "name": "rf.pair.choice.buttons.generate.default",
+                "view": "rf.program",
+                "svg": "assets/svg/pair.svg"
+              }
+            ]
+          }
+        },
+        {
+          "id": "rf.imitate",
+          "options": {
+            "title": "rf.pair.imitate.title.socket",
+            "body": "rf.pair.imitate.body.build_in",
+            "svg": "assets/svg/AYCT-102_pair.svg"
+          },
+          "navigation": {
+            "prev": "rf.choice"
+          }
+        },
+        {
+          "id": "rf.test_switch.2",
+          "options": {
+            "initWithDeviceData": true,
+            "title": "rf.pair.test_switch.title.build_in",
+            "body": "rf.pair.test_switch.body.build_in"
+          },
+          "navigation": {
+            "prev": "rf.imitate",
+            "next": "choose_slave.2"
+          }
+        },
+        {
+          "id": "choose_slave.2",
+          "template": "choose_slave",
+          "navigation": {
+            "prev": "rf.test_switch.2",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.program",
+          "options": {
+            "title": "rf.pair.program.title.build_in",
+            "body": "rf.pair.program.body.build_in",
+            "svg": "assets/svg/pair.svg"
+          },
+          "navigation": {
+            "prev": "rf.choice"
+          }
+        },
+        {
+          "id": "rf.test_switch",
+          "options": {
+            "title": "rf.pair.test_switch.title.build_in",
+            "body": "rf.pair.test_switch.body.build_in",
+            "initWithDeviceData": true
+          },
+          "navigation": {
+            "prev": "rf.program",
+            "next": "choose_slave"
+          }
+        },
+        {
+          "id": "choose_slave",
+          "template": "choose_slave",
+          "navigation": {
+            "prev": "rf.test_switch",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.done"
+        }
+      ],
+      "id": "ACM-250-LD",
+      "name": {
+        "en": "ACM-250-LD"
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Advanced settings",
+            "nl": "Geadvanceerde instellingen"
+          },
+          "children": [
+            {
+              "id": "timeout",
+              "type": "dropdown",
+              "value": "0",
+              "label": {
+                "en": "Timeout to turn off. Please select the same setting on the physical device.",
+                "nl": "Vertraging om uit te schakelen. Selecteer dezelfde tijd als op het fysieke apparaat."
+              },
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "Never",
+                    "nl": "Nooit"
+                  }
+                },
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "1 Minute",
+                    "nl": "1 Minuut"
+                  }
+                },
+                {
+                  "id": "10",
+                  "label": {
+                    "en": "10 Minutes",
+                    "nl": "10 Minuten"
+                  }
+                },
+                {
+                  "id": "60",
+                  "label": {
+                    "en": "1 Hour",
+                    "nl": "1 Uur"
+                  }
+                },
+                {
+                  "id": "240",
+                  "label": {
+                    "en": "4 Hours",
+                    "nl": "4 Uur"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "images": {
         "large": "/drivers/ACM-300/assets/images/large.png",
         "small": "/drivers/ACM-300/assets/images/small.png"
       },
@@ -1920,8 +2550,8 @@
       "class": "socket",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -2236,6 +2866,201 @@
     },
     {
       "images": {
+        "large": "/drivers/ACST-606/assets/images/large.png",
+        "small": "/drivers/ACST-606/assets/images/small.png"
+      },
+      "icon": "/drivers/ACST-606/assets/icon.svg",
+      "capabilities": [
+        "alarm_contact"
+      ],
+      "class": "sensor",
+      "rf": {
+        "debounceTimeout": 500,
+        "minTxInterval": 1000,
+        "dropPendingPayload": true,
+        "signal": "kaku",
+        "sendToggleAfterTimeout": [
+          null,
+          "timeout"
+        ]
+      },
+      "pair": [
+        {
+          "id": "rf.imitate",
+          "options": {
+            "body": "rf.pair.imitate.body.AMST-606",
+            "svg": "assets/svg/pair.svg",
+            "title": "rf.pair.imitate.title.AMST-606"
+          }
+        },
+        {
+          "id": "rf.test",
+          "options": {
+            "body": "rf.pair.test.body.AMST-606",
+            "initWithDeviceData": true,
+            "svg": "assets/svg/test.svg",
+            "title": "rf.pair.test.title.AMST-606"
+          },
+          "navigation": {
+            "prev": "rf.imitate",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.done"
+        }
+      ],
+      "id": "ACST-606",
+      "name": {
+        "en": "ACST-606"
+      },
+      "energy": {
+        "batteries": [
+          "CR1632"
+        ]
+      },
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Advanced settings",
+            "nl": "Geadvanceerde instellingen"
+          },
+          "children": [
+            {
+              "id": "timeout",
+              "type": "dropdown",
+              "value": "0",
+              "label": {
+                "en": "Force stop contact alarm after",
+                "nl": "Forceer stop contact alarm na"
+              },
+              "values": [
+                {
+                  "id": "0",
+                  "label": {
+                    "en": "never",
+                    "nl": "nooit"
+                  }
+                },
+                {
+                  "id": "1",
+                  "label": {
+                    "en": "1 Minute",
+                    "nl": "1 Minuut"
+                  }
+                },
+                {
+                  "id": "2",
+                  "label": {
+                    "en": "2 Minutes",
+                    "nl": "2 Minuten"
+                  }
+                },
+                {
+                  "id": "5",
+                  "label": {
+                    "en": "5 Minutes",
+                    "nl": "5 Minuten"
+                  }
+                },
+                {
+                  "id": "6",
+                  "label": {
+                    "en": "6 Minutes",
+                    "nl": "6 Minuten"
+                  }
+                },
+                {
+                  "id": "8",
+                  "label": {
+                    "en": "8 Minutes",
+                    "nl": "8 Minuten"
+                  }
+                },
+                {
+                  "id": "10",
+                  "label": {
+                    "en": "10 Minutes",
+                    "nl": "10 Minuten"
+                  }
+                },
+                {
+                  "id": "15",
+                  "label": {
+                    "en": "15 Minutes",
+                    "nl": "15 Minuten"
+                  }
+                },
+                {
+                  "id": "20",
+                  "label": {
+                    "en": "20 Minutes",
+                    "nl": "20 Minuten"
+                  }
+                },
+                {
+                  "id": "30",
+                  "label": {
+                    "en": "30 Minutes",
+                    "nl": "30 Minuten"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "images": {
+        "large": "/drivers/ACST-9900/assets/images/large.png",
+        "small": "/drivers/ACST-9900/assets/images/small.png"
+      },
+      "icon": "/drivers/ACST-9900/assets/icon.svg",
+      "capabilities": [],
+      "class": "other",
+      "rf": {
+        "debounceTimeout": 500,
+        "dropPendingPayload": false,
+        "minTxInterval": 500,
+        "signal": "kaku"
+      },
+      "pair": [
+        {
+          "id": "rf.imitate",
+          "options": {
+            "title": "rf.pair.imitate.title.remote",
+            "body": "rf.pair.imitate.body.remote",
+            "svg": "assets/svg/pair.svg"
+          }
+        },
+        {
+          "id": "rf.test",
+          "options": {
+            "svg": "assets/svg/test.svg"
+          },
+          "navigation": {
+            "prev": "rf.imitate",
+            "next": "rf.done"
+          }
+        },
+        {
+          "id": "rf.done"
+        }
+      ],
+      "id": "ACST-9900",
+      "name": {
+        "en": "ACST-9900"
+      },
+      "energy": {
+        "batteries": [
+          "CR2450"
+        ]
+      }
+    },
+    {
+      "images": {
         "large": "/drivers/AFR-060/assets/images/large.jpg",
         "small": "/drivers/AFR-060/assets/images/small.jpg"
       },
@@ -2246,8 +3071,8 @@
       "class": "light",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -2649,8 +3474,8 @@
       "class": "socket",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -2866,8 +3691,8 @@
       "class": "socket",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -2972,8 +3797,8 @@
       "class": "other",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -3002,6 +3827,11 @@
       "id": "AKCT-510",
       "name": {
         "en": "AKCT-510"
+      },
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
       }
     },
     {
@@ -3016,8 +3846,8 @@
       "class": "light",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -3094,6 +3924,13 @@
       "id": "ALED-003",
       "name": {
         "en": "ALED-003"
+      },
+      "energy": {
+        "batteries": [
+          "AAA",
+          "AAA",
+          "AAA"
+        ]
       }
     },
     {
@@ -3187,6 +4024,10 @@
       "id": "ALED-2009",
       "name": {
         "en": "ALED-2009"
+      },
+      "energy": {
+        "usageOn": 9,
+        "usageOff": 1
       }
     },
     {
@@ -3280,6 +4121,10 @@
       "id": "ALED-2709",
       "name": {
         "en": "ALED-2709"
+      },
+      "energy": {
+        "usageOn": 9,
+        "usageOff": 1
       }
     },
     {
@@ -3373,6 +4218,10 @@
       "id": "ALED-EC2206",
       "name": {
         "en": "ALED-EC2206"
+      },
+      "energy": {
+        "usageOn": 6,
+        "usageOff": 0.5
       }
     },
     {
@@ -3466,6 +4315,10 @@
       "id": "ALED-G2706",
       "name": {
         "en": "ALED-G2706"
+      },
+      "energy": {
+        "usageOn": 6,
+        "usageOff": 1
       }
     },
     {
@@ -3559,6 +4412,10 @@
       "id": "ALED-MR2705",
       "name": {
         "en": "ALED-MR2705"
+      },
+      "energy": {
+        "usageOn": 5,
+        "usageOff": 1
       }
     },
     {
@@ -3610,6 +4467,11 @@
       "id": "AMST-606",
       "name": {
         "en": "AMST-606"
+      },
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
       },
       "settings": [
         {
@@ -3876,8 +4738,8 @@
       "class": "other",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -3906,6 +4768,11 @@
       "id": "APA2-2300R",
       "name": {
         "en": "APA2-2300R"
+      },
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
       }
     },
     {
@@ -3920,8 +4787,8 @@
       "class": "socket",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -4026,8 +4893,8 @@
       "class": "other",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -4056,6 +4923,11 @@
       "id": "APA3-1500R",
       "name": {
         "en": "APA3-1500R"
+      },
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
       }
     },
     {
@@ -4070,8 +4942,8 @@
       "class": "socket",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -4176,8 +5048,8 @@
       "class": "other",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -4206,6 +5078,11 @@
       "id": "APC3-2300R",
       "name": {
         "en": "APC3-2300R"
+      },
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
       }
     },
     {
@@ -4220,8 +5097,8 @@
       "class": "socket",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -4328,8 +5205,8 @@
       "class": "socket",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -4559,6 +5436,12 @@
       "id": "APIR-2150",
       "name": {
         "en": "APIR-2150"
+      },
+      "energy": {
+        "batteries": [
+          "AAA",
+          "AAA"
+        ]
       }
     },
     {
@@ -4573,8 +5456,8 @@
       "class": "windowcoverings",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "settings": [
@@ -4686,8 +5569,8 @@
       "class": "other",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -4716,6 +5599,12 @@
       "id": "ATMT-502",
       "name": {
         "en": "ATMT-502"
+      },
+      "energy": {
+        "batteries": [
+          "CR2032",
+          "A23"
+        ]
       }
     },
     {
@@ -4948,8 +5837,8 @@
       "class": "socket",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -5056,8 +5945,8 @@
       "class": "socket",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -5162,8 +6051,8 @@
       "class": "other",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "settings": [
@@ -5230,6 +6119,11 @@
       "id": "AWMT-003",
       "name": {
         "en": "AWMT-003"
+      },
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
       }
     },
     {
@@ -5242,8 +6136,8 @@
       "class": "other",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "settings": [
@@ -5324,8 +6218,8 @@
       "class": "socket",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -5555,6 +6449,12 @@
       "id": "AWST-6000",
       "name": {
         "en": "AWST-6000"
+      },
+      "energy": {
+        "batteries": [
+          "AAA",
+          "AAA"
+        ]
       }
     },
     {
@@ -5567,8 +6467,8 @@
       "class": "other",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "settings": [
@@ -5635,6 +6535,11 @@
       "id": "AWST-8800",
       "name": {
         "en": "AWST-8800"
+      },
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
       }
     },
     {
@@ -5716,6 +6621,11 @@
       "id": "AWST-8802",
       "name": {
         "en": "AWST-8802"
+      },
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
       }
     },
     {
@@ -5728,8 +6638,8 @@
       "class": "other",
       "rf": {
         "debounceTimeout": 500,
-        "minTxInterval": 1000,
         "dropPendingPayload": false,
+        "minTxInterval": 500,
         "signal": "kaku"
       },
       "pair": [
@@ -5758,6 +6668,11 @@
       "id": "AYCT-102",
       "name": {
         "en": "AYCT-102"
+      },
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
       }
     },
     {
@@ -5798,6 +6713,11 @@
       "id": "AYCT-202",
       "name": {
         "en": "AYCT-202"
+      },
+      "energy": {
+        "batteries": [
+          "CR2450"
+        ]
       }
     },
     {
@@ -5840,6 +6760,11 @@
       "id": "KCT-101",
       "name": {
         "en": "KCT-101"
+      },
+      "energy": {
+        "batteries": [
+          "A23"
+        ]
       }
     },
     {
@@ -5882,6 +6807,11 @@
       "id": "KCT-510",
       "name": {
         "en": "KCT-510"
+      },
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
       }
     },
     {
@@ -5924,6 +6854,11 @@
       "id": "PA3-1000R",
       "name": {
         "en": "PA3-1000R"
+      },
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
       }
     },
     {
@@ -6232,6 +7167,13 @@
       "id": "PIR-2050",
       "name": {
         "en": "PIR-2050"
+      },
+      "energy": {
+        "batteries": [
+          "AA",
+          "AA",
+          "AA"
+        ]
       }
     },
     {
@@ -6432,6 +7374,11 @@
       "id": "TMT-502",
       "name": {
         "en": "TMT-502"
+      },
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
       }
     },
     {
@@ -6512,6 +7459,11 @@
       "id": "WST-8700",
       "name": {
         "en": "WST-8700"
+      },
+      "energy": {
+        "batteries": [
+          "A23"
+        ]
       }
     },
     {
@@ -6592,6 +7544,11 @@
       "id": "WST-8800",
       "name": {
         "en": "WST-8800"
+      },
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
       }
     },
     {
@@ -7081,41 +8038,50 @@
       "id": "YCT-102",
       "name": {
         "en": "YCT-102"
+      },
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
       }
     }
   ],
   "flow": {
-    "actions": [
+    "triggers": [
       {
-        "id": "ACDB-6600C:send",
+        "id": "ACCT-510:received",
         "title": {
-          "en": "Trigger Doorbell",
-          "nl": "Laat deurbel afgaan"
+          "en": "Button is pressed",
+          "nl": "Knop is ingedrukt"
         },
         "args": [
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=ACDB-6600C"
+            "filter": "driver_id=ACCT-510"
+          },
+          {
+            "name": "state",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "On",
+                  "nl": "Aan"
+                }
+              },
+              {
+                "id": "0",
+                "label": {
+                  "en": "Off",
+                  "nl": "Uit"
+                }
+              }
+            ]
           }
         ]
       },
-      {
-        "id": "ACDB-7000C:send",
-        "title": {
-          "en": "Trigger Doorbell",
-          "nl": "Laat deurbel afgaan"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=ACDB-7000C"
-          }
-        ]
-      }
-    ],
-    "triggers": [
       {
         "id": "ACDB-7000A:received",
         "title": {
@@ -7141,6 +8107,40 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=ACDB-7000B"
+          }
+        ]
+      },
+      {
+        "id": "ACST-9900:received",
+        "title": {
+          "en": "Button is pressed",
+          "nl": "Knop is ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ACST-9900"
+          },
+          {
+            "name": "state",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "On",
+                  "nl": "Aan"
+                }
+              },
+              {
+                "id": "0",
+                "label": {
+                  "en": "Off",
+                  "nl": "Uit"
+                }
+              }
+            ]
           }
         ]
       },
@@ -8379,35 +9379,65 @@
           }
         ]
       }
+    ],
+    "actions": [
+      {
+        "id": "ACDB-6600C:send",
+        "title": {
+          "en": "Trigger Doorbell",
+          "nl": "Laat deurbel afgaan"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ACDB-6600C"
+          }
+        ]
+      },
+      {
+        "id": "ACDB-7000C:send",
+        "title": {
+          "en": "Trigger Doorbell",
+          "nl": "Laat deurbel afgaan"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ACDB-7000C"
+          }
+        ]
+      }
     ]
   },
   "signals": {
     "433": {
       "kaku": {
         "sof": [
-          225,
-          2774
+          265,
+          2580
         ],
         "eof": [
-          236
+          265
         ],
         "words": [
           [
-            240,
-            308,
-            240,
-            1348
+            265,
+            295,
+            265,
+            1280
           ],
           [
-            240,
-            1338,
-            240,
-            320
+            265,
+            1280,
+            265,
+            295
           ]
         ],
-        "interval": 10150,
-        "sensitivity": 0.5,
-        "repetitions": 5,
+        "interval": 10665,
+        "sensitivity": 0.4,
+        "repetitions": 10,
         "minimalLength": 32,
         "maximalLength": 36
       },
@@ -8421,27 +9451,27 @@
         ],
         "words": [
           [
-            240,
-            308,
-            240,
-            1348
+            265,
+            295,
+            265,
+            1280
           ],
           [
-            240,
-            1338,
-            240,
-            320
+            265,
+            1280,
+            265,
+            295
           ],
           [
-            240,
-            308,
-            240,
-            308
+            265,
+            295,
+            265,
+            295
           ]
         ],
-        "interval": 10150,
-        "sensitivity": 0.5,
-        "repetitions": 5,
+        "interval": 10665,
+        "sensitivity": 0.4,
+        "repetitions": 10,
         "minimalLength": 32,
         "maximalLength": 36
       },

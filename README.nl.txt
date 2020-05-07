@@ -1,0 +1,2 @@
+Met KlikAanKlikUit bedien je je verlichting en andere slimme apparaten draadloos - thuis en op afstand. Dim de lampen in je slaapkamer langzaam om je wakker te maken en zet ze aan zodra de zon ondergaat.
+Verbind met Homey en creëer de mooiste scenes met een druk op de knop.
