@@ -1,0 +1,22 @@
+{
+    "id": "ACC-250",
+    "name": {
+        "en": "ACC-250"
+    },
+    "images": {
+        "large": "{{driverPath}}/assets/images/large.png",
+        "small": "{{driverPath}}/assets/images/small.png"
+    },
+    "$pairOptions": {
+		"rf.program": {
+			"body": "rf.pair.program.body.simple_socket"
+		}
+	},
+    "$extends": [
+        "defaults",
+        "images.png",
+        "device.socket",
+        "capabilities.dim",
+        "pair.socket"
+    ]
+}
